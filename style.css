@@ -1,32 +1,103 @@
-.container{
-    display:flex;
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+
+}
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("comfy.jpg");
+    background-size: cover; 
+    background-position: center; 
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.container div{
-    background: honeydew;
-    border: 4px solid brown;
-    height: 80px;
-    flex: 1 1 auto
+.logo{
+    width:120px;
+    height:120px;
+
 }
 
+.navbar ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px;
+    position: relative;
 
-.navlist{
-    display:flex;
-    margin: 0;
-    padding: 0;
-    gap: 3rem;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+
+}
+    
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width:0;
+    background: #009688;
+    position: absolute; 
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.content{
+    width:100%;
+    position:absolute; 
+    top:50%;
+    transform: translateY(-50%);
+    text-align:center;
+    color:#fff;
+}
+
+.content h1{
+    font-size:70px;
+
+}
+.content p{
+    margin: 20px auto;
+}
+
+button{
+    width:200px;
+    padding:15px 0;
+    background: transparent;
+    color:#fff;
+    border-radius: 25px;
+    border:2px solid burlywood;
+    cursor:pointer;
+    position: relative;
+    overflow: hidden;
+
+}
+span{
+    height:100%;
+    width:0;
+    border-radius:25px;
+    background: rgb(222,184,135);
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    z-index:-1;
+    transition: 0.5s;
     
 }
 
-.navlist li{
-    flex-shrink: 1;
-    flex-grow: 1;
+button:hover span{
+    width:100%
 }
-
-.colums{
-    display: flex
-    border: 4px black
-    
-}
-
-
